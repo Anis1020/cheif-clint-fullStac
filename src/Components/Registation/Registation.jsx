@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { FaGoogle } from "react-icons/fa";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../routers/AuthProvider";
 
@@ -33,7 +33,7 @@ const Registation = () => {
       });
   };
   return (
-    <>
+    <div className="card w-96 bg-base-100 shadow-2xl m-auto my-4">
       <form onSubmit={handleRegister}>
         <div>
           <div className="my-4">
@@ -73,11 +73,19 @@ const Registation = () => {
       </form>
       <button
         onClick={handleGoogleSignUp}
-        className="btn btn-primary flex gap-4 m-auto"
+        className="btn btn-outline flex gap-4 m-auto"
       >
         {" "}
         <FaGoogle></FaGoogle> SignUp by Google
-      </button>
+      </button>{" "}
+      <br />
+      {/* <button
+        onClick={handleGoogleSignUp}
+        className="btn btn-outline flex gap-4 m-auto"
+      >
+        {" "}
+        <FaGithub></FaGithub> SignUp by Github
+      </button> */}
       <p>
         <span>
           Already have an accout?{" "}
@@ -86,7 +94,7 @@ const Registation = () => {
           </Link>{" "}
         </span>
       </p>
-    </>
+    </div>
   );
 };
 
