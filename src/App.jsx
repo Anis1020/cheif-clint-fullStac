@@ -13,7 +13,9 @@ function App() {
   return (
     <>
       <NaveBare></NaveBare>
-      <Outlet></Outlet>
+      <div className="min-h-screen">
+        <Outlet></Outlet>
+      </div>
       <Footer></Footer>
     </>
   );

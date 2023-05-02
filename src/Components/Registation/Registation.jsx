@@ -3,32 +3,49 @@ import { Link } from "react-router-dom";
 
 const Registation = () => {
   return (
-    <div>
+    <>
       <form>
         <div>
-          <div>
-            <label htmlFor="name">Name</label>
-            <input type="text" name="name" id="" />
+          <div className="my-4">
+            <input
+              type="text"
+              placeholder="Type Name"
+              className="input input-bordered input-success w-full max-w-xs"
+            />
           </div>
-          <div>
-            <label htmlFor="email">Email</label>
-            <input type="email" name="email" id="" />
+          <div className="my-4">
+            <input
+              type="email"
+              placeholder="Type Email"
+              className="input input-bordered input-success w-full max-w-xs"
+            />
           </div>
-          <div>
-            <label htmlFor="password">Password</label>
-            <input type="password" name="password" id="" />
+          <div className="my-4">
+            <input
+              type="password"
+              placeholder="Type Password"
+              className="input input-bordered input-success w-full max-w-xs"
+            />
           </div>
-          <div>
-            <label htmlFor="photo">Photo</label>
-            <input type="text" name="photo" id="" />
+          <div className="my-4">
+            <input
+              type="text"
+              placeholder="Type Photo URL"
+              className="input input-bordered input-success w-full max-w-xs"
+            />
           </div>
-          <button>Register</button>
-          <span>
-            Already have an accout? <Link to="/login">Please Login</Link>{" "}
-          </span>
+          <button className="btn btn-warning my-4">Register</button>
+          <p>
+            <span>
+              Already have an accout?{" "}
+              <Link className="btn btn-link" to="/login">
+                Please Login
+              </Link>{" "}
+            </span>
+          </p>
         </div>
       </form>
-    </div>
+    </>
   );
 };
 
