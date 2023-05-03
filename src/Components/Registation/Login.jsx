@@ -1,9 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../routers/AuthProvider";
 
 const Login = () => {
-  const { loginUser } = useContext(AuthContext);
+  const [error, setError] = useState(null);
+  const { loginUser, createUserByGoogle, createUserByGithub } =
+    useContext(AuthContext);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -14,6 +17,25 @@ const Login = () => {
     loginUser(email, password)
       .then((result) => {
         console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const handleGoogleSignUp = () => {
+    createUserByGoogle()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  const handleGithubSignUp = () => {
+    createUserByGithub()
+      .then((result) => {
+        console.log(result);
       })
       .catch((error) => {
         console.log(error);
@@ -51,6 +73,21 @@ const Login = () => {
           </p>
         </div>
       </form>
+      <button
+        onClick={handleGoogleSignUp}
+        className="btn btn-outline flex gap-4 m-auto"
+      >
+        {" "}
+        <FaGoogle></FaGoogle> SignUp by Google
+      </button>{" "}
+      <br />
+      <button
+        onClick={handleGithubSignUp}
+        className="btn btn-outline flex gap-4 m-auto"
+      >
+        {" "}
+        <FaGithub></FaGithub> SignUp by Github
+      </button>
     </div>
   );
 };

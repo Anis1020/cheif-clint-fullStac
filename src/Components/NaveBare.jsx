@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../routers/AuthProvider";
 
 const NaveBare = () => {
+  const { user, logOutUser } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOutUser()
+      .then()
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -16,12 +26,22 @@ const NaveBare = () => {
             <Link className="mr-5" to="/blog">
               Blog
             </Link>
-            <Link className="mr-5" to="/login">
-              Login
-            </Link>
+
             <Link className="mr-5" to="/register">
               Register
             </Link>
+            {user ? (
+              <>
+                <span>{user.email}</span>
+                <button onClick={handleLogOut} className="btn btn-link">
+                  LogOut
+                </button>
+              </>
+            ) : (
+              <Link className="mr-5" to="/login">
+                Login
+              </Link>
+            )}
           </nav>
 
           <div className="dropdown dropdown-end">
