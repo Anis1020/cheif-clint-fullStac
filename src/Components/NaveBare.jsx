@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../routers/AuthProvider";
+import ActiveLink from "./ActiveLink/ActiveLink";
 
 const NaveBare = () => {
   const { user, logOutUser } = useContext(AuthContext);
@@ -19,17 +20,17 @@ const NaveBare = () => {
           <a className="btn btn-ghost normal-case text-xl">Bangla Food</a>
         </div>
         <div className="flex-none">
-          <nav className="flex">
-            <Link className="mr-5" to="/">
+          <nav className="flex mr-5 gap-5">
+            <ActiveLink className="mr-5" to="/">
               Home
-            </Link>
-            <Link className="mr-5" to="/blog">
+            </ActiveLink>
+            <ActiveLink className="mr-5" to="/blog">
               Blog
-            </Link>
+            </ActiveLink>
 
-            <Link className="mr-5" to="/register">
+            <ActiveLink className="mr-5" to="/register">
               Register
-            </Link>
+            </ActiveLink>
             {user ? (
               <>
                 <span>{user.email}</span>
@@ -38,9 +39,9 @@ const NaveBare = () => {
                 </button>
               </>
             ) : (
-              <Link className="mr-5" to="/login">
+              <ActiveLink className="mr-5" to="/login">
                 Login
-              </Link>
+              </ActiveLink>
             )}
           </nav>
 
