@@ -7,6 +7,7 @@ import Registation from "../Components/Registation/Registation";
 import Footer from "../Components/Footer";
 import Blog from "../Blog";
 import ErrorPage from "../Components/ErrorPage";
+import ChefRecipe from "../Components/ChefRecipe/ChefRecipe";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,12 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Registation></Registation>,
+      },
+      {
+        path: "/:id",
+        element: <ChefRecipe></ChefRecipe>,
+        loader: () =>
+          fetch("https://assignment-10-server-site-anis1020.vercel.app/chef"),
       },
     ],
   },
