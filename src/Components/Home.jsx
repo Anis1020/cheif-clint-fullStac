@@ -7,7 +7,8 @@ import { AuthContext } from "../routers/AuthProvider";
 const Home = () => {
   const { loading } = useContext(AuthContext);
   const chef = useLoaderData();
-  console.log(chef.chefs);
+  console.log(chef);
+  // console.log(chef.chefs);
   if (loading) {
     return <progress className="progress bg-red-600 w-56"></progress>;
   }
@@ -17,7 +18,7 @@ const Home = () => {
         <img className=" h-96 w-full object-cover py-8" src={bgImg} alt="" />
       </div>
       <div className="grid lg:grid-cols-3 my-5 gap-4 ">
-        {chef.chefs.map((singleChef) => (
+        {chef.map((singleChef) => (
           <SingleChef key={singleChef.id} singleChef={singleChef}></SingleChef>
         ))}
       </div>

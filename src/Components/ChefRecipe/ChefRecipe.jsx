@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useLoaderData, useParams } from "react-router-dom";
@@ -7,9 +7,19 @@ import SingleChefDetail from "../SingleChefDetail/SingleChefDetail";
 
 const ChefRecipe = () => {
   const [disable, setDisable] = useState(false);
-  const id = useParams();
+
+  const Id = useParams();
+  // console.log(typeof id);
   const chefDetails = useLoaderData();
+
   console.log(chefDetails);
+
+  // useEffect(() => {
+  //   const chefRecipe = chefDetails.find((ch) => ch._id === Id);
+  //   setRecipe(chefRecipe);
+  // }, []);
+  // // const {} = recipe;
+  // console.log(recipe);
 
   const handleFavorite = () => {
     setDisable(toast("Added in you Favorite list!"));

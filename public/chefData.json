@@ -1,0 +1,285 @@
+[
+  {
+    "_id": 1,
+    "chefPicture": "https://thumbs.dreamstime.com/b/chef-woman-gesturing-ok-confident-sign-vector-illustration-116211561.jpg",
+    "chefName": "Chef John Doe",
+    "bio": "A passionate chef with a flair for creating delicious and innovative dishes.",
+    "likes": 5000,
+    "numRecipes": 10,
+    "yearsOfExperience": 15,
+    "recipes": [
+      {
+        "name": "Recipe 1",
+        "ingredients": [
+          "Ingredient 1",
+          "Ingredient 2",
+          "Ingredient 3",
+          "Ingredient 4",
+          "Ingredient 5"
+        ],
+        "cookingMethod": "Cooking method for Recipe 1",
+        "rating": 4.5
+      },
+      {
+        "name": "Recipe 2",
+        "ingredients": [
+          "Ingredient 1",
+          "Ingredient 2",
+          "Ingredient 3",
+          "Ingredient 4",
+          "Ingredient 5"
+        ],
+        "cookingMethod": "Cooking method for Recipe 2",
+        "rating": 4.8
+      },
+      {
+        "name": "Recipe 3",
+        "ingredients": [
+          "Ingredient 1",
+          "Ingredient 2",
+          "Ingredient 3",
+          "Ingredient 4",
+          "Ingredient 5"
+        ],
+        "cookingMethod": "Cooking method for Recipe 3",
+        "rating": 4.2
+      }
+    ]
+  },
+  {
+    "_id": 2,
+    "chefPicture": "https://thumbs.dreamstime.com/z/cartoon-character-chef-woman-holding-burger-cheese-plate-117864245.jpg",
+    "chefName": "Chef Jane Smith",
+    "bio": "An experienced chef specializing in international cuisines.",
+    "likes": 3500,
+    "numRecipes": 8,
+    "yearsOfExperience": 12,
+    "recipes": [
+      {
+        "name": "Recipe 1",
+        "ingredients": [
+          "Ingredient 1",
+          "Ingredient 2",
+          "Ingredient 3",
+          "Ingredient 4",
+          "Ingredient 5"
+        ],
+        "cookingMethod": "Cooking method for Recipe 1",
+        "rating": 4.7
+      },
+      {
+        "name": "Recipe 2",
+        "ingredients": [
+          "Ingredient 1",
+          "Ingredient 2",
+          "Ingredient 3",
+          "Ingredient 4",
+          "Ingredient 5"
+        ],
+        "cookingMethod": "Cooking method for Recipe 2",
+        "rating": 4.3
+      },
+      {
+        "name": "Recipe 3",
+        "ingredients": [
+          "Ingredient 1",
+          "Ingredient 2",
+          "Ingredient 3",
+          "Ingredient 4",
+          "Ingredient 5"
+        ],
+        "cookingMethod": "Cooking method for Recipe 3",
+        "rating": 4.6
+      }
+    ]
+  },
+  {
+    "_id": 3,
+    "chefPicture": "https://images.pexels.com/photos/2544829/pexels-photo-2544829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "chefName": "Chef David Johnson",
+    "bio": "A culinary expert with a focus on farm-to-table cooking and sustainable ingredients.",
+    "likes": 7000,
+    "numRecipes": 15,
+    "yearsOfExperience": 20,
+    "recipes": [
+      {
+        "name": "Recipe 1",
+        "ingredients": [
+          "Ingredient 1",
+          "Ingredient 2",
+          "Ingredient 3",
+          "Ingredient 4",
+          "Ingredient ",
+          "Ingredient 5"
+        ],
+        "cookingMethod": "Cooking method for Recipe 1",
+        "rating": 4.5
+      },
+      {
+        "name": "Recipe 2",
+        "ingredients": [
+          "Ingredient 1",
+          "Ingredient 2",
+          "Ingredient 3",
+          "Ingredient 4",
+          "Ingredient 5"
+        ],
+        "cookingMethod": "Cooking method for Recipe 2",
+        "rating": 4.8
+      },
+      {
+        "name": "Recipe 3",
+        "ingredients": [
+          "Ingredient 1",
+          "Ingredient 2",
+          "Ingredient 3",
+          "Ingredient 4",
+          "Ingredient 5"
+        ],
+        "cookingMethod": "Cooking method for Recipe 3",
+        "rating": 4.2
+      }
+    ]
+  },
+  {
+    "_id": 4,
+    "chefPicture": "https://thumbs.dreamstime.com/b/chef-woman-gesturing-ok-confident-sign-vector-illustration-116211561.jpg",
+    "chefName": "Chef Sarah Thompson",
+    "bio": "An award-winning chef known for her creative fusion dishes.",
+    "likes": 4500,
+    "numRecipes": 12,
+    "yearsOfExperience": 18,
+    "recipes": [
+      {
+        "name": "Recipe 1",
+        "ingredients": [
+          "Ingredient 1",
+          "Ingredient 2",
+          "Ingredient 3",
+          "Ingredient 4",
+          "Ingredient 5"
+        ],
+        "cookingMethod": "Cooking method for Recipe 1",
+        "rating": 4.6
+      },
+      {
+        "name": "Recipe 2",
+        "ingredients": [
+          "Ingredient 1",
+          "Ingredient 2",
+          "Ingredient 3",
+          "Ingredient 4",
+          "Ingredient 5"
+        ],
+        "cookingMethod": "Cooking method for Recipe 2",
+        "rating": 4.3
+      },
+      {
+        "name": "Recipe 3",
+        "ingredients": [
+          "Ingredient 1",
+          "Ingredient 2",
+          "Ingredient 3",
+          "Ingredient 4",
+          "Ingredient 5"
+        ],
+        "cookingMethod": "Cooking method for Recipe 3",
+        "rating": 4.7
+      }
+    ]
+  },
+  {
+    "_id": 5,
+    "chefPicture": "https://thumbs.dreamstime.com/z/cartoon-character-chef-woman-holding-burger-cheese-plate-117864245.jpg",
+    "chefName": "Chef Michael Brown",
+    "bio": "A master of traditional cooking techniques with a modern twist.",
+    "likes": 6000,
+    "numRecipes": 14,
+    "yearsOfExperience": 16,
+    "recipes": [
+      {
+        "name": "Recipe 1",
+        "ingredients": [
+          "Ingredient 1",
+          "Ingredient 2",
+          "Ingredient 3",
+          "Ingredient 4",
+          "Ingredient 5"
+        ],
+        "cookingMethod": "Cooking method for Recipe 1",
+        "rating": 4.8
+      },
+      {
+        "name": "Recipe 2",
+        "ingredients": [
+          "Ingredient 1",
+          "Ingredient 2",
+          "Ingredient 3",
+          "Ingredient 4",
+          "Ingredient 5"
+        ],
+        "cookingMethod": "Cooking method for Recipe 2",
+        "rating": 4.4
+      },
+      {
+        "name": "Recipe 3",
+        "ingredients": [
+          "Ingredient 1",
+          "Ingredient 2",
+          "Ingredient 3",
+          "Ingredient 4",
+          "Ingredient 5"
+        ],
+        "cookingMethod": "Cooking method for Recipe 3",
+        "rating": 4.6
+      }
+    ]
+  },
+  {
+    "_id": 6,
+    "chefPicture": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "chefName": "Chef Emily Wilson",
+    "bio": "A rising star in the culinary world with a focus on healthy and organic cuisine.",
+    "likes": 5500,
+    "numRecipes": 9,
+    "yearsOfExperience": 10,
+    "recipes": [
+      {
+        "name": "Recipe 1",
+        "ingredients": [
+          "Ingredient 1",
+          "Ingredient 2",
+          "Ingredient 3",
+          "Ingredient 4",
+          "Ingredient 5"
+        ],
+        "cookingMethod": "Cooking method for Recipe 1",
+        "rating": 4.4
+      },
+      {
+        "name": "Recipe 2",
+        "ingredients": [
+          "Ingredient 1",
+          "Ingredient 2",
+          "Ingredient 3",
+          "Ingredient 4",
+          "Ingredient 5"
+        ],
+        "cookingMethod": "Cooking method for Recipe 2",
+        "rating": 4.2
+      },
+      {
+        "name": "Recipe 3",
+        "ingredients": [
+          "Ingredient 1",
+          "Ingredient 2",
+          "Ingredient 3",
+          "Ingredient 4",
+          "Ingredient 5"
+        ],
+        "cookingMethod": "Cooking method for Recipe 3",
+        "rating": 4.5
+      }
+    ]
+  }
+]
