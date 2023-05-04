@@ -1,10 +1,10 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const SingleChef = ({ singleChef }) => {
   const { id, chefName, chefPicture, likes, numRecipes, yearsOfExperience } =
     singleChef;
   //   console.log(singleChef);
+
   return (
     <div>
       <div className="card  bg-slate-400 text-black shadow-2xl">
