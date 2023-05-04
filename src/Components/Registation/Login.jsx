@@ -1,12 +1,15 @@
 import React, { useContext, useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../routers/AuthProvider";
 
 const Login = () => {
   const [error, setError] = useState(null);
   const { loginUser, createUserByGoogle, createUserByGithub } =
     useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location?.state?.from?.pathname || "/";
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -17,6 +20,7 @@ const Login = () => {
     loginUser(email, password)
       .then((result) => {
         console.log("wrig info", result.user);
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         setError("wrong information", error);

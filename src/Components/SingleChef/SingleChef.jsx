@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
 
 const SingleChef = ({ singleChef }) => {
-  const { id, chefName, chefPicture, likes, numRecipes, yearsOfExperience } =
-    singleChef;
+  const {
+    id,
+    chefName,
+    bio,
+    chefPicture,
+    likes,
+    numRecipes,
+    yearsOfExperience,
+  } = singleChef;
   //   console.log(singleChef);
 
   return (
@@ -13,13 +20,14 @@ const SingleChef = ({ singleChef }) => {
         </figure>
         <div className="card-body items-center text-center">
           <h2 className="card-title">{chefName}</h2>
+          <p> {bio}</p>
           <p>Chef Year of experience {yearsOfExperience}</p>
           <p>Number of recipe {numRecipes}</p>
           <p>Likes icon {likes}</p>
           <div className="card-actions">
             <Link to={`/${id}`}>
               {" "}
-              <button className="btn btn-primary">Chef's Recipe</button>
+              <button className="btn btn-primary">Chef's Recipes</button>
             </Link>
           </div>
         </div>

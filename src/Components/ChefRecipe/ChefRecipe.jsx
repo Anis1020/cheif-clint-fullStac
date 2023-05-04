@@ -3,13 +3,13 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useLoaderData, useParams } from "react-router-dom";
 import img from "../../assets/bg-image.jpg";
+import SingleChefDetail from "../SingleChefDetail/SingleChefDetail";
 
 const ChefRecipe = () => {
   const [disable, setDisable] = useState(false);
   const id = useParams();
   const chefDetails = useLoaderData();
   console.log(chefDetails);
-  const { chefPicture, recipes } = chefDetails;
 
   const handleFavorite = () => {
     setDisable(toast("Added in you Favorite list!"));
@@ -68,6 +68,11 @@ const ChefRecipe = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        {/* {chefDetails.chefs.map((cDetails) => (
+          <SingleChefDetail cDetails={cDetails}></SingleChefDetail>
+        ))} */}
       </div>
     </div>
   );
