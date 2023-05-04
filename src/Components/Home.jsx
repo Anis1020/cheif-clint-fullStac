@@ -1,10 +1,16 @@
 import bgImg from "../assets/bg-image.jpg";
 import { useLoaderData } from "react-router-dom";
 import SingleChef from "./SingleChef/SingleChef";
+import { useContext } from "react";
+import { AuthContext } from "../routers/AuthProvider";
 
 const Home = () => {
+  const { loading } = useContext(AuthContext);
   const chef = useLoaderData();
   console.log(chef.chefs);
+  if (loading) {
+    return <progress className="progress bg-red-600 w-56"></progress>;
+  }
   return (
     <div>
       <div>
