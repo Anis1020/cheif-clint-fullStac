@@ -17,6 +17,8 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () =>
+          fetch("https://assignment-10-server-site-anis1020.vercel.app/chef"),
       },
 
       {

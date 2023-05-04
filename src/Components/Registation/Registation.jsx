@@ -85,7 +85,7 @@ const Registation = () => {
 
       <p>
         <span>
-          Already have an accout?{" "}
+          Already have an account?{" "}
           <Link className="btn btn-link" to="/login">
             Please Login
           </Link>{" "}
