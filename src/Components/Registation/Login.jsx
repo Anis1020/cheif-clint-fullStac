@@ -16,10 +16,10 @@ const Login = () => {
     console.log(email, password);
     loginUser(email, password)
       .then((result) => {
-        console.log(result.user);
+        console.log("wrig info", result.user);
       })
       .catch((error) => {
-        console.log(error);
+        setError("wrong information", error);
       });
   };
 
@@ -43,6 +43,7 @@ const Login = () => {
   };
   return (
     <div className="card w-96 bg-base-100 shadow-2xl m-auto my-4">
+      <p>{error}</p>
       <form onSubmit={handleLogin}>
         <div>
           <div className="my-4">

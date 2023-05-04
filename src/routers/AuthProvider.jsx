@@ -26,7 +26,6 @@ const AuthProvider = ({ children }) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
   const createUserByGoogle = () => {
-    setLoading(true);
     return signInWithPopup(auth, googleProvaider);
   };
   const createUserByGithub = () => {
@@ -34,7 +33,9 @@ const AuthProvider = ({ children }) => {
   };
 
   const loginUser = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
+    setError("wrong information");
   };
 
   const logOutUser = () => {
@@ -60,6 +61,7 @@ const AuthProvider = ({ children }) => {
     createUserByGithub,
     loginUser,
     logOutUser,
+    error,
   };
   return (
     <div>
