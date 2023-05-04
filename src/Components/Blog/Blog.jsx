@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
+import { Document, Page } from "react-pdf";
 
 const Blog = () => {
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
+
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
+
   return (
-    <div>
+    <>
+      <div>
+        <Document file="somefile.pdf" onLoadSuccess={onDocumentLoadSuccess}>
+          <Page pageNumber={pageNumber} />
+        </Document>
+        <p>
+          Page {pageNumber} of {numPages}
+        </p>
+      </div>
+
       <div className="p-10 my-10 bg-teal-700 text-white rounded">
         <h2>
           Q1.Tell us the differences between uncontrolled and controlled
@@ -33,7 +50,7 @@ const Blog = () => {
           repetation{" "}
         </p>
       </div>
-    </div>
+    </>
   );
 };
 

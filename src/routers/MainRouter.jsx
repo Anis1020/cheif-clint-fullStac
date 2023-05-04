@@ -5,10 +5,11 @@ import Home from "../Components/Home";
 import Login from "../Components/Registation/Login";
 import Registation from "../Components/Registation/Registation";
 import Footer from "../Components/Footer";
-import Blog from "../Blog";
+
 import ErrorPage from "../Components/ErrorPage";
 import ChefRecipe from "../Components/ChefRecipe/ChefRecipe";
 import PrivetRoute from "./PrivetRoute";
+import Blog from "../Components/Blog/Blog";
 
 const router = createBrowserRouter([
   {
