@@ -73,6 +73,37 @@ const Home = () => {
           </small>
         </div>
       </div>
+      {/* //extra section added */}
+      <h1 className="text-2xl bg-cyan-600 rounded"> Review</h1>
+      <div className="grid lg:grid-cols-3 gap-4 text-start mb-5 mt-1  text-black">
+        <div className="shadow-2xl bg-cyan-600 gap-4  p-5 rounded ">
+          <img src={bgImg} className="w-16 rounded-full" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
+            consequuntur temporibus veritatis tempore sequi eveniet corrupti
+            expedita, sunt iure accusamus?
+          </p>
+          <h1 className="text-2xl">josim</h1>
+        </div>{" "}
+        <div className="shadow-2xl bg-cyan-600 gap-4  p-5 rounded ">
+          <img src={bgImg} className="w-16 rounded-full" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
+            consequuntur temporibus veritatis tempore sequi eveniet corrupti
+            expedita, sunt iure accusamus?
+          </p>
+          <h1 className="text-2xl">josim</h1>
+        </div>
+        <div className="shadow-2xl bg-cyan-600 gap-4  p-5 ">
+          <img src={bgImg} className="w-16 rounded-full" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
+            consequuntur temporibus veritatis tempore sequi eveniet corrupti
+            expedita, sunt iure accusamus?
+          </p>
+          <h1 className="text-2xl">josim</h1>
+        </div>
+      </div>
     </div>
   );
 };
