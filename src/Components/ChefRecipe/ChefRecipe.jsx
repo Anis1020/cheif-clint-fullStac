@@ -26,8 +26,8 @@ const ChefRecipe = () => {
         <div className="card-body">
           <h2 className="card-title">{chefName}</h2>
           <p>Bio {bio}</p>
-          <p>Number of recipe {numRecipes}</p>
-          <p>Work experience {yearsOfExperience}</p>
+          <p>Number of recipe: {numRecipes}</p>
+          <p>Work experience: {yearsOfExperience} Years</p>
         </div>
       </div>
 

@@ -8,6 +8,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
 
@@ -52,6 +53,12 @@ const AuthProvider = ({ children }) => {
       unSubscribe;
     };
   }, []);
+
+  // useEffect(() => {
+  //   const updateProfile = updateProfile(auth, (userProfile) => {
+  //     setUser(userProfile)
+  //   });
+  // }, []);
 
   const authInfo = {
     user,

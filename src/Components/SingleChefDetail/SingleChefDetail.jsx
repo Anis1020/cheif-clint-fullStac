@@ -26,10 +26,12 @@ const SingleChefDetail = ({ recipe }) => {
           ))}
           <div className="card-actions ">
             <button className="btn btn-primary">Order Now</button>
-            <span onClick={handleFavorite}>
-              <button className="btn btn-primary">Favorite </button>{" "}
-              <ToastContainer />
-            </span>
+            {!disable && (
+              <span onClick={handleFavorite}>
+                <button className="btn btn-primary">Favorite </button>{" "}
+                <ToastContainer />
+              </span>
+            )}
           </div>
           <p>Rating: {rating}</p>
         </div>
