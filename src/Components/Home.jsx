@@ -7,7 +7,7 @@ import { AuthContext } from "../routers/AuthProvider";
 const Home = () => {
   const { loading } = useContext(AuthContext);
   const chef = useLoaderData();
-  console.log(chef);
+  // console.log(chef);
   // console.log(chef.chefs);
   if (loading) {
     return <progress className="progress bg-red-600 w-56"></progress>;

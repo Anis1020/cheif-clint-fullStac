@@ -45,7 +45,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://assignment-10-server-site-anis1020.vercel.app/${params.id}`
+            `https://assignment-10-server-site-anis1020.vercel.app/chef/${params.id}`
           ),
       },
     ],

@@ -1,84 +1,34 @@
-import React, { useEffect, useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { useLoaderData, useParams } from "react-router-dom";
-import img from "../../assets/bg-image.jpg";
+
 import SingleChefDetail from "../SingleChefDetail/SingleChefDetail";
 
 const ChefRecipe = () => {
-  const [disable, setDisable] = useState(false);
-
   const Id = useParams();
   // console.log(typeof id);
   const chefDetails = useLoaderData();
-
+  const { chefName, bio, chefPicture, likes, numRecipes, yearsOfExperience } =
+    chefDetails;
   console.log(chefDetails);
 
-  // useEffect(() => {
-  //   const chefRecipe = chefDetails.find((ch) => ch._id === Id);
-  //   setRecipe(chefRecipe);
-  // }, []);
-  // // const {} = recipe;
-  // console.log(recipe);
-
-  const handleFavorite = () => {
-    setDisable(toast("Added in you Favorite list!"));
-  };
   return (
     <div>
-      <div className="card card-side bg-slate-300 text-black shadow-2xl">
-        <figure className=" ">
-          <img className="w-96 rounded" src={img} alt="img" />
+      <div className="card card-compact w-96 bg-base-100 shadow-2xl m-auto text-center">
+        <figure>
+          <img src={chefPicture} alt="Shoes" />
         </figure>
-        <div className="grid lg:grid-cols-2 gap-4">
-          <div className="card-body shadow-2xl bg-purple-600 mx-5 rounded">
-            <h2 className="card-title">Panta Vat and alu vorta!</h2>
-            <p>Click the button to watch on app.</p>
-            <div className="card-actions ">
-              <button className="btn btn-primary">Order Now</button>
-              <span onClick={handleFavorite}>
-                {!disable && (
-                  <button className="btn btn-primary">Favorite </button>
-                )}
-                <ToastContainer />
-              </span>
-            </div>
-          </div>
-          <div className="card-body shadow-2xl bg-purple-600 mx-5 rounded">
-            <h2 className="card-title">Dim khechuri!</h2>
-            <p>Click the button to watch on app.</p>
-            <div className="card-actions ">
-              <button className="btn btn-primary">Order Now</button>
-              <span onClick={handleFavorite}>
-                <button className="btn btn-primary">Favorite </button>{" "}
-                <ToastContainer />
-              </span>
-            </div>
-          </div>
-          <div className="card-body shadow-2xl bg-purple-600 mx-5 rounded">
-            <h2 className="card-title">Daul Vat with vorta!</h2>
-            <p>Click the button to watch on app.</p>
-            <div className="card-actions ">
-              <button className="btn btn-primary">Order Now</button>
-              <span onClick={handleFavorite}>
-                <button className="btn btn-primary">Favorite </button>{" "}
-                <ToastContainer />
-              </span>
-            </div>
-          </div>{" "}
-          <div className="card-body shadow-2xl bg-purple-600 mx-5 rounded">
-            <h2 className="card-title">New movie is released!</h2>
-            <p>Click the button to watch on app.</p>
-            <div className="card-actions ">
-              <button className="btn btn-primary">Order Now</button>
-              <span onClick={handleFavorite}>
-                <button className="btn btn-primary">Favorite </button>{" "}
-                <ToastContainer />
-              </span>
-            </div>
-          </div>
+        <div className="card-body">
+          <h2 className="card-title">{chefName}</h2>
+          <p>Bio {bio}</p>
+          <p>Number of recipe {numRecipes}</p>
+          <p>Work experience {yearsOfExperience}</p>
         </div>
       </div>
+
+      <div className="">
+        <SingleChefDetail chefDetails={chefDetails}></SingleChefDetail>
+        <h2>comming soon</h2>
+      </div>
+
       <div>
         {/* {chefDetails.chefs.map((cDetails) => (
           <SingleChefDetail cDetails={cDetails}></SingleChefDetail>
