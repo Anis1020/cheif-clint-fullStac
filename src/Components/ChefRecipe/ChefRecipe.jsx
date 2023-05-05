@@ -6,15 +6,22 @@ const ChefRecipe = () => {
   const Id = useParams();
   // console.log(typeof id);
   const chefDetails = useLoaderData();
-  const { chefName, bio, chefPicture, likes, numRecipes, yearsOfExperience } =
-    chefDetails;
+  const {
+    chefName,
+    bio,
+    chefPicture,
+    likes,
+    recipes,
+    numRecipes,
+    yearsOfExperience,
+  } = chefDetails;
   console.log(chefDetails);
 
   return (
     <div>
       <div className="card card-compact w-96 bg-base-100 shadow-2xl m-auto text-center">
         <figure>
-          <img src={chefPicture} alt="Shoes" />
+          <img className="rounded" src={chefPicture} alt="Shoes" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{chefName}</h2>
@@ -24,15 +31,10 @@ const ChefRecipe = () => {
         </div>
       </div>
 
-      <div className="">
-        <SingleChefDetail chefDetails={chefDetails}></SingleChefDetail>
-        <h2>comming soon</h2>
-      </div>
-
-      <div>
-        {/* {chefDetails.chefs.map((cDetails) => (
-          <SingleChefDetail cDetails={cDetails}></SingleChefDetail>
-        ))} */}
+      <div className="grid gap-4 lg:grid-cols-3 ">
+        {recipes.map((recipe) => (
+          <SingleChefDetail recipe={recipe}></SingleChefDetail>
+        ))}
       </div>
     </div>
   );
